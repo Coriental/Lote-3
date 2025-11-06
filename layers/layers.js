@@ -1,476 +1,532 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("EPSG:32721").setExtent([443715.509490, 7182946.015381, 499770.320270, 7212452.156208]);
+//ol.proj.get("EPSG:32721").setExtent([467672.192432, 7187686.153489, 482596.283067, 7195546.812338]);
 var wms_layers = [];
 
 
         var lyr_GoogleHybrid_0 = new ol.layer.Tile({
             'title': 'Google Hybrid',
-            //'type': 'base',
             'opacity': 1.000000,
             
             
             source: new ol.source.XYZ({
-    attributions: ' &middot; <a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>',
+            attributions: '&nbsp;&middot; <a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>',
                 url: 'https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}'
             })
         });
 
         var lyr_OpenStreetMap_1 = new ol.layer.Tile({
             'title': 'OpenStreetMap',
-            //'type': 'base',
             'opacity': 1.000000,
             
             
             source: new ol.source.XYZ({
-    attributions: ' ',
+            attributions: ' ',
                 url: 'http://tile.openstreetmap.org/{z}/{x}/{y}.png'
             })
         });
-var format_PDL3_2 = new ol.format.GeoJSON();
-var features_PDL3_2 = format_PDL3_2.readFeatures(json_PDL3_2, 
+var format_PostacionL3_2 = new ol.format.GeoJSON();
+var features_PostacionL3_2 = format_PostacionL3_2.readFeatures(json_PostacionL3_2, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:32721'});
-var jsonSource_PDL3_2 = new ol.source.Vector({
+var jsonSource_PostacionL3_2 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_PDL3_2.addFeatures(features_PDL3_2);
-var lyr_PDL3_2 = new ol.layer.Vector({
+jsonSource_PostacionL3_2.addFeatures(features_PostacionL3_2);
+var lyr_PostacionL3_2 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_PDL3_2, 
-                style: style_PDL3_2,
-                popuplayertitle: "PD L3",
+                source:jsonSource_PostacionL3_2, 
+                style: style_PostacionL3_2,
+                popuplayertitle: 'Postacion L3',
                 interactive: true,
-                title: '<img src="styles/legend/PDL3_2.png" /> PD L3'
+                title: '<img src="styles/legend/PostacionL3_2.png" /> Postacion L3'
             });
-var format_PDL3sist11022025_3 = new ol.format.GeoJSON();
-var features_PDL3sist11022025_3 = format_PDL3sist11022025_3.readFeatures(json_PDL3sist11022025_3, 
+var format_POSTACIONEXISTENTE_3 = new ol.format.GeoJSON();
+var features_POSTACIONEXISTENTE_3 = format_POSTACIONEXISTENTE_3.readFeatures(json_POSTACIONEXISTENTE_3, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:32721'});
-var jsonSource_PDL3sist11022025_3 = new ol.source.Vector({
+var jsonSource_POSTACIONEXISTENTE_3 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_PDL3sist11022025_3.addFeatures(features_PDL3sist11022025_3);
-var lyr_PDL3sist11022025_3 = new ol.layer.Vector({
+jsonSource_POSTACIONEXISTENTE_3.addFeatures(features_POSTACIONEXISTENTE_3);
+var lyr_POSTACIONEXISTENTE_3 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_PDL3sist11022025_3, 
-                style: style_PDL3sist11022025_3,
-                popuplayertitle: "PD L3 sist 11-02-2025",
+                source:jsonSource_POSTACIONEXISTENTE_3, 
+                style: style_POSTACIONEXISTENTE_3,
+                popuplayertitle: 'POSTACION EXISTENTE',
                 interactive: true,
-                title: '<img src="styles/legend/PDL3sist11022025_3.png" /> PD L3 sist 11-02-2025'
+                title: '<img src="styles/legend/POSTACIONEXISTENTE_3.png" /> POSTACION EXISTENTE'
             });
-var format_APL3_4 = new ol.format.GeoJSON();
-var features_APL3_4 = format_APL3_4.readFeatures(json_APL3_4, 
+var format_ITG11_4 = new ol.format.GeoJSON();
+var features_ITG11_4 = format_ITG11_4.readFeatures(json_ITG11_4, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:32721'});
-var jsonSource_APL3_4 = new ol.source.Vector({
+var jsonSource_ITG11_4 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_APL3_4.addFeatures(features_APL3_4);
-var lyr_APL3_4 = new ol.layer.Vector({
+jsonSource_ITG11_4.addFeatures(features_ITG11_4);
+var lyr_ITG11_4 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_APL3_4, 
-                style: style_APL3_4,
-                popuplayertitle: "AP L3",
+                source:jsonSource_ITG11_4, 
+                style: style_ITG11_4,
+                popuplayertitle: 'ITG11',
                 interactive: true,
-                title: '<img src="styles/legend/APL3_4.png" /> AP L3'
+                title: '<img src="styles/legend/ITG11_4.png" /> ITG11'
             });
-var format_PostacionL3_5 = new ol.format.GeoJSON();
-var features_PostacionL3_5 = format_PostacionL3_5.readFeatures(json_PostacionL3_5, 
+var format_ITG2_5 = new ol.format.GeoJSON();
+var features_ITG2_5 = format_ITG2_5.readFeatures(json_ITG2_5, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:32721'});
-var jsonSource_PostacionL3_5 = new ol.source.Vector({
+var jsonSource_ITG2_5 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_PostacionL3_5.addFeatures(features_PostacionL3_5);
-var lyr_PostacionL3_5 = new ol.layer.Vector({
+jsonSource_ITG2_5.addFeatures(features_ITG2_5);
+var lyr_ITG2_5 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_PostacionL3_5, 
-                style: style_PostacionL3_5,
-                popuplayertitle: "Postacion L3",
+                source:jsonSource_ITG2_5, 
+                style: style_ITG2_5,
+                popuplayertitle: 'ITG2',
                 interactive: true,
-                title: '<img src="styles/legend/PostacionL3_5.png" /> Postacion L3'
+                title: '<img src="styles/legend/ITG2_5.png" /> ITG2'
             });
-var format_POSTACIONEXISTENTE_6 = new ol.format.GeoJSON();
-var features_POSTACIONEXISTENTE_6 = format_POSTACIONEXISTENTE_6.readFeatures(json_POSTACIONEXISTENTE_6, 
+var format_CAE2_6 = new ol.format.GeoJSON();
+var features_CAE2_6 = format_CAE2_6.readFeatures(json_CAE2_6, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:32721'});
-var jsonSource_POSTACIONEXISTENTE_6 = new ol.source.Vector({
+var jsonSource_CAE2_6 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_POSTACIONEXISTENTE_6.addFeatures(features_POSTACIONEXISTENTE_6);
-var lyr_POSTACIONEXISTENTE_6 = new ol.layer.Vector({
+jsonSource_CAE2_6.addFeatures(features_CAE2_6);
+var lyr_CAE2_6 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_POSTACIONEXISTENTE_6, 
-                style: style_POSTACIONEXISTENTE_6,
-                popuplayertitle: "POSTACION EXISTENTE",
+                source:jsonSource_CAE2_6, 
+                style: style_CAE2_6,
+                popuplayertitle: 'CAE2',
                 interactive: true,
-                title: '<img src="styles/legend/POSTACIONEXISTENTE_6.png" /> POSTACION EXISTENTE'
+                title: '<img src="styles/legend/CAE2_6.png" /> CAE2'
             });
-var format_ITG11_7 = new ol.format.GeoJSON();
-var features_ITG11_7 = format_ITG11_7.readFeatures(json_ITG11_7, 
+var format_ALT_7 = new ol.format.GeoJSON();
+var features_ALT_7 = format_ALT_7.readFeatures(json_ALT_7, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:32721'});
-var jsonSource_ITG11_7 = new ol.source.Vector({
+var jsonSource_ALT_7 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_ITG11_7.addFeatures(features_ITG11_7);
-var lyr_ITG11_7 = new ol.layer.Vector({
+jsonSource_ALT_7.addFeatures(features_ALT_7);
+var lyr_ALT_7 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_ITG11_7, 
-                style: style_ITG11_7,
-                popuplayertitle: "ITG11",
+                source:jsonSource_ALT_7, 
+                style: style_ALT_7,
+                popuplayertitle: 'ALT',
                 interactive: true,
-                title: '<img src="styles/legend/ITG11_7.png" /> ITG11'
+                title: '<img src="styles/legend/ALT_7.png" /> ALT'
             });
-var format_ITG2_8 = new ol.format.GeoJSON();
-var features_ITG2_8 = format_ITG2_8.readFeatures(json_ITG2_8, 
+var format_GHN1_8 = new ol.format.GeoJSON();
+var features_GHN1_8 = format_GHN1_8.readFeatures(json_GHN1_8, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:32721'});
-var jsonSource_ITG2_8 = new ol.source.Vector({
+var jsonSource_GHN1_8 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_ITG2_8.addFeatures(features_ITG2_8);
-var lyr_ITG2_8 = new ol.layer.Vector({
+jsonSource_GHN1_8.addFeatures(features_GHN1_8);
+var lyr_GHN1_8 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_ITG2_8, 
-                style: style_ITG2_8,
-                popuplayertitle: "ITG2",
+                source:jsonSource_GHN1_8, 
+                style: style_GHN1_8,
+                popuplayertitle: 'GHN1',
                 interactive: true,
-                title: '<img src="styles/legend/ITG2_8.png" /> ITG2'
+                title: '<img src="styles/legend/GHN1_8.png" /> GHN1'
             });
-var format_CAE2_9 = new ol.format.GeoJSON();
-var features_CAE2_9 = format_CAE2_9.readFeatures(json_CAE2_9, 
+var format_PostacinExistSistema_9 = new ol.format.GeoJSON();
+var features_PostacinExistSistema_9 = format_PostacinExistSistema_9.readFeatures(json_PostacinExistSistema_9, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:32721'});
-var jsonSource_CAE2_9 = new ol.source.Vector({
+var jsonSource_PostacinExistSistema_9 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_CAE2_9.addFeatures(features_CAE2_9);
-var lyr_CAE2_9 = new ol.layer.Vector({
+jsonSource_PostacinExistSistema_9.addFeatures(features_PostacinExistSistema_9);
+var lyr_PostacinExistSistema_9 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_CAE2_9, 
-                style: style_CAE2_9,
-                popuplayertitle: "CAE2",
+                source:jsonSource_PostacinExistSistema_9, 
+                style: style_PostacinExistSistema_9,
+                popuplayertitle: 'Postación Exist. Sistema',
                 interactive: true,
-                title: '<img src="styles/legend/CAE2_9.png" /> CAE2'
+                title: '<img src="styles/legend/PostacinExistSistema_9.png" /> Postación Exist. Sistema'
             });
-var format_ALT_10 = new ol.format.GeoJSON();
-var features_ALT_10 = format_ALT_10.readFeatures(json_ALT_10, 
+var format_PostacionSistL3Exist28082025_10 = new ol.format.GeoJSON();
+var features_PostacionSistL3Exist28082025_10 = format_PostacionSistL3Exist28082025_10.readFeatures(json_PostacionSistL3Exist28082025_10, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:32721'});
-var jsonSource_ALT_10 = new ol.source.Vector({
+var jsonSource_PostacionSistL3Exist28082025_10 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_ALT_10.addFeatures(features_ALT_10);
-var lyr_ALT_10 = new ol.layer.Vector({
+jsonSource_PostacionSistL3Exist28082025_10.addFeatures(features_PostacionSistL3Exist28082025_10);
+var lyr_PostacionSistL3Exist28082025_10 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_ALT_10, 
-                style: style_ALT_10,
-                popuplayertitle: "ALT",
+                source:jsonSource_PostacionSistL3Exist28082025_10, 
+                style: style_PostacionSistL3Exist28082025_10,
+                popuplayertitle: 'Postacion Sist L3 Exist 28-08-2025',
                 interactive: true,
-                title: '<img src="styles/legend/ALT_10.png" /> ALT'
+                title: '<img src="styles/legend/PostacionSistL3Exist28082025_10.png" /> Postacion Sist L3 Exist 28-08-2025'
             });
-var format_GHN1_11 = new ol.format.GeoJSON();
-var features_GHN1_11 = format_GHN1_11.readFeatures(json_GHN1_11, 
+var format_PostacionSistL3Nuevo28082025_11 = new ol.format.GeoJSON();
+var features_PostacionSistL3Nuevo28082025_11 = format_PostacionSistL3Nuevo28082025_11.readFeatures(json_PostacionSistL3Nuevo28082025_11, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:32721'});
-var jsonSource_GHN1_11 = new ol.source.Vector({
+var jsonSource_PostacionSistL3Nuevo28082025_11 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_GHN1_11.addFeatures(features_GHN1_11);
-var lyr_GHN1_11 = new ol.layer.Vector({
+jsonSource_PostacionSistL3Nuevo28082025_11.addFeatures(features_PostacionSistL3Nuevo28082025_11);
+var lyr_PostacionSistL3Nuevo28082025_11 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_GHN1_11, 
-                style: style_GHN1_11,
-                popuplayertitle: "GHN1",
+                source:jsonSource_PostacionSistL3Nuevo28082025_11, 
+                style: style_PostacionSistL3Nuevo28082025_11,
+                popuplayertitle: 'Postacion Sist L3 Nuevo 28-08-2025',
                 interactive: true,
-                title: '<img src="styles/legend/GHN1_11.png" /> GHN1'
+                title: '<img src="styles/legend/PostacionSistL3Nuevo28082025_11.png" /> Postacion Sist L3 Nuevo 28-08-2025'
             });
-var format_PostacinExistSistema_12 = new ol.format.GeoJSON();
-var features_PostacinExistSistema_12 = format_PostacinExistSistema_12.readFeatures(json_PostacinExistSistema_12, 
+var format_PostacionL3Exist02112025_12 = new ol.format.GeoJSON();
+var features_PostacionL3Exist02112025_12 = format_PostacionL3Exist02112025_12.readFeatures(json_PostacionL3Exist02112025_12, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:32721'});
-var jsonSource_PostacinExistSistema_12 = new ol.source.Vector({
+var jsonSource_PostacionL3Exist02112025_12 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_PostacinExistSistema_12.addFeatures(features_PostacinExistSistema_12);
-var lyr_PostacinExistSistema_12 = new ol.layer.Vector({
+jsonSource_PostacionL3Exist02112025_12.addFeatures(features_PostacionL3Exist02112025_12);
+var lyr_PostacionL3Exist02112025_12 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_PostacinExistSistema_12, 
-                style: style_PostacinExistSistema_12,
-                popuplayertitle: "Postación Exist. Sistema",
+                source:jsonSource_PostacionL3Exist02112025_12, 
+                style: style_PostacionL3Exist02112025_12,
+                popuplayertitle: 'Postacion L3 Exist 02-11-2025',
                 interactive: true,
-                title: '<img src="styles/legend/PostacinExistSistema_12.png" /> Postación Exist. Sistema'
+                title: '<img src="styles/legend/PostacionL3Exist02112025_12.png" /> Postacion L3 Exist 02-11-2025'
             });
-var format_PostacionSistL3Nuevo29012025_13 = new ol.format.GeoJSON();
-var features_PostacionSistL3Nuevo29012025_13 = format_PostacionSistL3Nuevo29012025_13.readFeatures(json_PostacionSistL3Nuevo29012025_13, 
+var format_PostacionL3Nuevo02112025_13 = new ol.format.GeoJSON();
+var features_PostacionL3Nuevo02112025_13 = format_PostacionL3Nuevo02112025_13.readFeatures(json_PostacionL3Nuevo02112025_13, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:32721'});
-var jsonSource_PostacionSistL3Nuevo29012025_13 = new ol.source.Vector({
+var jsonSource_PostacionL3Nuevo02112025_13 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_PostacionSistL3Nuevo29012025_13.addFeatures(features_PostacionSistL3Nuevo29012025_13);
-var lyr_PostacionSistL3Nuevo29012025_13 = new ol.layer.Vector({
+jsonSource_PostacionL3Nuevo02112025_13.addFeatures(features_PostacionL3Nuevo02112025_13);
+var lyr_PostacionL3Nuevo02112025_13 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_PostacionSistL3Nuevo29012025_13, 
-                style: style_PostacionSistL3Nuevo29012025_13,
-                popuplayertitle: "Postacion Sist L3 Nuevo 29-01-2025",
+                source:jsonSource_PostacionL3Nuevo02112025_13, 
+                style: style_PostacionL3Nuevo02112025_13,
+                popuplayertitle: 'Postacion L3 Nuevo 02-11-2025',
                 interactive: true,
-                title: '<img src="styles/legend/PostacionSistL3Nuevo29012025_13.png" /> Postacion Sist L3 Nuevo 29-01-2025'
+                title: '<img src="styles/legend/PostacionL3Nuevo02112025_13.png" /> Postacion L3 Nuevo 02-11-2025'
             });
-var format_PostacionSistL3Exist29012025_14 = new ol.format.GeoJSON();
-var features_PostacionSistL3Exist29012025_14 = format_PostacionSistL3Exist29012025_14.readFeatures(json_PostacionSistL3Exist29012025_14, 
+var format_BT3x701x501x25L3_14 = new ol.format.GeoJSON();
+var features_BT3x701x501x25L3_14 = format_BT3x701x501x25L3_14.readFeatures(json_BT3x701x501x25L3_14, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:32721'});
-var jsonSource_PostacionSistL3Exist29012025_14 = new ol.source.Vector({
+var jsonSource_BT3x701x501x25L3_14 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_PostacionSistL3Exist29012025_14.addFeatures(features_PostacionSistL3Exist29012025_14);
-var lyr_PostacionSistL3Exist29012025_14 = new ol.layer.Vector({
+jsonSource_BT3x701x501x25L3_14.addFeatures(features_BT3x701x501x25L3_14);
+var lyr_BT3x701x501x25L3_14 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_PostacionSistL3Exist29012025_14, 
-                style: style_PostacionSistL3Exist29012025_14,
-                popuplayertitle: "Postacion Sist L3 Exist 29-01-2025",
+                source:jsonSource_BT3x701x501x25L3_14, 
+                style: style_BT3x701x501x25L3_14,
+                popuplayertitle: 'BT 3x70+1x50+1x25 L3',
                 interactive: true,
-                title: '<img src="styles/legend/PostacionSistL3Exist29012025_14.png" /> Postacion Sist L3 Exist 29-01-2025'
+                title: '<img src="styles/legend/BT3x701x501x25L3_14.png" /> BT 3x70+1x50+1x25 L3'
             });
-var format_BT3x701x501x25L3_15 = new ol.format.GeoJSON();
-var features_BT3x701x501x25L3_15 = format_BT3x701x501x25L3_15.readFeatures(json_BT3x701x501x25L3_15, 
+var format_MT3x35_L3_15 = new ol.format.GeoJSON();
+var features_MT3x35_L3_15 = format_MT3x35_L3_15.readFeatures(json_MT3x35_L3_15, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:32721'});
-var jsonSource_BT3x701x501x25L3_15 = new ol.source.Vector({
+var jsonSource_MT3x35_L3_15 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_BT3x701x501x25L3_15.addFeatures(features_BT3x701x501x25L3_15);
-var lyr_BT3x701x501x25L3_15 = new ol.layer.Vector({
+jsonSource_MT3x35_L3_15.addFeatures(features_MT3x35_L3_15);
+var lyr_MT3x35_L3_15 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_BT3x701x501x25L3_15, 
-                style: style_BT3x701x501x25L3_15,
-                popuplayertitle: "BT 3x70+1x50+1x25 L3",
+                source:jsonSource_MT3x35_L3_15, 
+                style: style_MT3x35_L3_15,
+                popuplayertitle: 'MT 3x35_L3',
                 interactive: true,
-                title: '<img src="styles/legend/BT3x701x501x25L3_15.png" /> BT 3x70+1x50+1x25 L3'
+                title: '<img src="styles/legend/MT3x35_L3_15.png" /> MT 3x35_L3'
             });
-var format_MT3x35_L3_16 = new ol.format.GeoJSON();
-var features_MT3x35_L3_16 = format_MT3x35_L3_16.readFeatures(json_MT3x35_L3_16, 
+var format_MT3x70L3_16 = new ol.format.GeoJSON();
+var features_MT3x70L3_16 = format_MT3x70L3_16.readFeatures(json_MT3x70L3_16, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:32721'});
-var jsonSource_MT3x35_L3_16 = new ol.source.Vector({
+var jsonSource_MT3x70L3_16 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_MT3x35_L3_16.addFeatures(features_MT3x35_L3_16);
-var lyr_MT3x35_L3_16 = new ol.layer.Vector({
+jsonSource_MT3x70L3_16.addFeatures(features_MT3x70L3_16);
+var lyr_MT3x70L3_16 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_MT3x35_L3_16, 
-                style: style_MT3x35_L3_16,
-                popuplayertitle: "MT 3x35_L3",
+                source:jsonSource_MT3x70L3_16, 
+                style: style_MT3x70L3_16,
+                popuplayertitle: 'MT 3x70 L3',
                 interactive: true,
-                title: '<img src="styles/legend/MT3x35_L3_16.png" /> MT 3x35_L3'
+                title: '<img src="styles/legend/MT3x70L3_16.png" /> MT 3x70 L3'
             });
-var format_MT3x70L3_17 = new ol.format.GeoJSON();
-var features_MT3x70L3_17 = format_MT3x70L3_17.readFeatures(json_MT3x70L3_17, 
+var format_MT3x185L3_17 = new ol.format.GeoJSON();
+var features_MT3x185L3_17 = format_MT3x185L3_17.readFeatures(json_MT3x185L3_17, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:32721'});
-var jsonSource_MT3x70L3_17 = new ol.source.Vector({
+var jsonSource_MT3x185L3_17 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_MT3x70L3_17.addFeatures(features_MT3x70L3_17);
-var lyr_MT3x70L3_17 = new ol.layer.Vector({
+jsonSource_MT3x185L3_17.addFeatures(features_MT3x185L3_17);
+var lyr_MT3x185L3_17 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_MT3x70L3_17, 
-                style: style_MT3x70L3_17,
-                popuplayertitle: "MT 3x70 L3",
+                source:jsonSource_MT3x185L3_17, 
+                style: style_MT3x185L3_17,
+                popuplayertitle: 'MT 3x185 L3',
                 interactive: true,
-                title: '<img src="styles/legend/MT3x70L3_17.png" /> MT 3x70 L3'
+                title: '<img src="styles/legend/MT3x185L3_17.png" /> MT 3x185 L3'
             });
-var format_MT3x185L3_18 = new ol.format.GeoJSON();
-var features_MT3x185L3_18 = format_MT3x185L3_18.readFeatures(json_MT3x185L3_18, 
+var format_PDL3_18 = new ol.format.GeoJSON();
+var features_PDL3_18 = format_PDL3_18.readFeatures(json_PDL3_18, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:32721'});
-var jsonSource_MT3x185L3_18 = new ol.source.Vector({
+var jsonSource_PDL3_18 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_MT3x185L3_18.addFeatures(features_MT3x185L3_18);
-var lyr_MT3x185L3_18 = new ol.layer.Vector({
+jsonSource_PDL3_18.addFeatures(features_PDL3_18);
+var lyr_PDL3_18 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_MT3x185L3_18, 
-                style: style_MT3x185L3_18,
-                popuplayertitle: "MT 3x185 L3",
+                source:jsonSource_PDL3_18, 
+                style: style_PDL3_18,
+                popuplayertitle: 'PD L3',
                 interactive: true,
-                title: '<img src="styles/legend/MT3x185L3_18.png" /> MT 3x185 L3'
+                title: '<img src="styles/legend/PDL3_18.png" /> PD L3'
+            });
+var format_PDL3Sist02112025_19 = new ol.format.GeoJSON();
+var features_PDL3Sist02112025_19 = format_PDL3Sist02112025_19.readFeatures(json_PDL3Sist02112025_19, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:32721'});
+var jsonSource_PDL3Sist02112025_19 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_PDL3Sist02112025_19.addFeatures(features_PDL3Sist02112025_19);
+var lyr_PDL3Sist02112025_19 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_PDL3Sist02112025_19, 
+                style: style_PDL3Sist02112025_19,
+                popuplayertitle: 'PD L3 Sist 02-11-2025',
+                interactive: true,
+                title: '<img src="styles/legend/PDL3Sist02112025_19.png" /> PD L3 Sist 02-11-2025'
             });
 var group_Lote1 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "Lote 1"});
+                                fold: 'open',
+                                title: 'Lote 1'});
 var group_Lote2 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "Lote 2"});
+                                fold: 'close',
+                                title: 'Lote 2'});
 var group_Lote3 = new ol.layer.Group({
-                                layers: [lyr_PDL3_2,lyr_PDL3sist11022025_3,],
-                                fold: "open",
-                                title: "Lote 3"});
+                                layers: [],
+                                fold: 'close',
+                                title: 'Lote 3'});
 var group_Lote4 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "Lote 4"});
+                                fold: 'close',
+                                title: 'Lote 4'});
 var group_Lote5 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "Lote 5"});
+                                fold: 'close',
+                                title: 'Lote 5'});
 var group_Lote6 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "Lote 6"});
+                                fold: 'close',
+                                title: 'Lote 6'});
 var group_PRIORITARIO = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "PRIORITARIO"});
+                                fold: 'open',
+                                title: 'PRIORITARIO'});
+var group_Lote7 = new ol.layer.Group({
+                                layers: [],
+                                fold: 'close',
+                                title: 'Lote 7'});
+var group_Lote9 = new ol.layer.Group({
+                                layers: [],
+                                fold: 'close',
+                                title: 'Lote 9'});
+var group_Lote8 = new ol.layer.Group({
+                                layers: [],
+                                fold: 'close',
+                                title: 'Lote 8'});
+var group_Puntosdetrabajo = new ol.layer.Group({
+                                layers: [],
+                                fold: 'close',
+                                title: 'Puntos de trabajo'});
+var group_CIASANtraSradelaAsuncin = new ol.layer.Group({
+                                layers: [],
+                                fold: 'close',
+                                title: 'CIA S.A. - Ntra. Sra. de la Asunción'});
+var group_Rutasazonasdetrabajo = new ol.layer.Group({
+                                layers: [],
+                                fold: 'close',
+                                title: 'Rutas a zonas de trabajo'});
 var group_LOTE1 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "LOTE 1"});
+                                fold: 'close',
+                                title: 'LOTE 1'});
 var group_LOTE2 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "LOTE 2"});
+                                fold: 'close',
+                                title: 'LOTE 2'});
 var group_FDM1 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "FDM1"});
+                                fold: 'close',
+                                title: 'FDM1'});
 var group_FDM2 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "FDM2"});
+                                fold: 'close',
+                                title: 'FDM2'});
+var group_FDM5 = new ol.layer.Group({
+                                layers: [],
+                                fold: 'close',
+                                title: 'FDM5'});
 var group_VAU1 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "VAU1"});
+                                fold: 'close',
+                                title: 'VAU1'});
 var group_VAU2 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "VAU2"});
+                                fold: 'close',
+                                title: 'VAU2'});
 var group_VAU3 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "VAU3"});
+                                fold: 'close',
+                                title: 'VAU3'});
 var group_VAU5 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "VAU5"});
+                                fold: 'close',
+                                title: 'VAU5'});
 var group_VAU9 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "VAU9"});
+                                fold: 'close',
+                                title: 'VAU9'});
 var group_VAU11 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "VAU11"});
+                                fold: 'close',
+                                title: 'VAU11'});
 var group_VAU12 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "VAU12"});
+                                fold: 'open',
+                                title: 'VAU12'});
 var group_VAU13 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "VAU13"});
+                                fold: 'close',
+                                title: 'VAU13'});
 var group_VAU14 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "VAU14"});
+                                fold: 'close',
+                                title: 'VAU14'});
 var group_VAU24 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "VAU24"});
+                                fold: 'close',
+                                title: 'VAU24'});
 var group_VAU25 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "VAU25"});
+                                fold: 'close',
+                                title: 'VAU25'});
 var group_VAU28 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "VAU28"});
+                                fold: 'close',
+                                title: 'VAU28'});
 var group_N2 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "N2"});
+                                fold: 'close',
+                                title: 'N2'});
 var group_N3 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "N3"});
+                                fold: 'close',
+                                title: 'N3'});
 var group_LOTE3 = new ol.layer.Group({
-                                layers: [lyr_PostacionL3_5,lyr_POSTACIONEXISTENTE_6,lyr_ITG11_7,lyr_ITG2_8,lyr_CAE2_9,lyr_ALT_10,lyr_GHN1_11,lyr_PostacinExistSistema_12,lyr_PostacionSistL3Nuevo29012025_13,lyr_PostacionSistL3Exist29012025_14,],
-                                fold: "open",
-                                title: "LOTE 3"});
+                                layers: [lyr_PostacionL3_2,lyr_POSTACIONEXISTENTE_3,lyr_ITG11_4,lyr_ITG2_5,lyr_CAE2_6,lyr_ALT_7,lyr_GHN1_8,lyr_PostacinExistSistema_9,lyr_PostacionSistL3Exist28082025_10,lyr_PostacionSistL3Nuevo28082025_11,lyr_PostacionL3Exist02112025_12,lyr_PostacionL3Nuevo02112025_13,],
+                                fold: 'close',
+                                title: 'LOTE 3'});
 var group_LOTE4 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "LOTE 4"});
+                                fold: 'close',
+                                title: 'LOTE 4'});
 var group_LOTE5 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "LOTE 5"});
+                                fold: 'close',
+                                title: 'LOTE 5'});
 var group_Baslica = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "Basílica"});
+                                fold: 'close',
+                                title: 'Basílica'});
 var group_LOTE6 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "LOTE 6"});
+                                fold: 'close',
+                                title: 'LOTE 6'});
+var group_LOTE7 = new ol.layer.Group({
+                                layers: [],
+                                fold: 'close',
+                                title: 'LOTE 7'});
+var group_LOTE8 = new ol.layer.Group({
+                                layers: [],
+                                fold: 'close',
+                                title: 'LOTE 8'});
+var group_LOTE9 = new ol.layer.Group({
+                                layers: [],
+                                fold: 'close',
+                                title: 'LOTE 9'});
 var group_Lote2 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "Lote2"});
+                                fold: 'close',
+                                title: 'Lote2'});
 var group_lote5 = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "lote 5"});
+                                fold: 'close',
+                                title: 'lote 5'});
 var group_OpenStreetMap = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "OpenStreetMap"});
+                                fold: 'close',
+                                title: 'OpenStreetMap'});
 var group_MPAADEUBICACN = new ol.layer.Group({
                                 layers: [],
-                                fold: "open",
-                                title: "MPAA DE UBICACÓN"});
+                                fold: 'close',
+                                title: 'MPAA DE UBICACÓN'});
 
-lyr_GoogleHybrid_0.setVisible(true);lyr_OpenStreetMap_1.setVisible(true);lyr_PDL3_2.setVisible(true);lyr_PDL3sist11022025_3.setVisible(true);lyr_APL3_4.setVisible(true);lyr_PostacionL3_5.setVisible(true);lyr_POSTACIONEXISTENTE_6.setVisible(true);lyr_ITG11_7.setVisible(true);lyr_ITG2_8.setVisible(true);lyr_CAE2_9.setVisible(true);lyr_ALT_10.setVisible(true);lyr_GHN1_11.setVisible(true);lyr_PostacinExistSistema_12.setVisible(true);lyr_PostacionSistL3Nuevo29012025_13.setVisible(true);lyr_PostacionSistL3Exist29012025_14.setVisible(true);lyr_BT3x701x501x25L3_15.setVisible(true);lyr_MT3x35_L3_16.setVisible(true);lyr_MT3x70L3_17.setVisible(true);lyr_MT3x185L3_18.setVisible(true);
-var layersList = [lyr_GoogleHybrid_0,lyr_OpenStreetMap_1,group_Lote3,lyr_APL3_4,group_LOTE3,lyr_BT3x701x501x25L3_15,lyr_MT3x35_L3_16,lyr_MT3x70L3_17,lyr_MT3x185L3_18];
-lyr_PDL3_2.set('fieldAliases', {'ALIMENTADOR': 'ALIMENTADOR', 'TIPO COLUMNA': 'TIPO COLUMNA', 'N° DE SOSTEN': 'N° DE SOSTEN', 'N° DE FÁBRICA': 'N° DE FÁBRICA', 'NRO ANDE': 'NRO ANDE', 'COORDENADA X': 'COORDENADA X', 'COORDENADA Y': 'COORDENADA Y', });
-lyr_PDL3sist11022025_3.set('fieldAliases', {'Fecha de inicio': 'Fecha de inicio', 'Numero de Sosten': 'Numero de Sosten', 'Alimentadores Lote 3': 'Alimentadores Lote 3', 'Tipo de Poste': 'Tipo de Poste', 'Nro de Fabrica del trafo': 'Nro de Fabrica del trafo', 'N�ANDE': 'N�ANDE', 'Longitud': 'Longitud', 'Latitud': 'Latitud', });
-lyr_APL3_4.set('fieldAliases', {'LOTE': 'LOTE', 'CONTRATIST': 'CONTRATIST', 'ALIMENTADO': 'ALIMENTADO', 'N° DE SOS': 'N° DE SOS', 'TIPO DE PO': 'TIPO DE PO', 'TIPO AP': 'TIPO AP', 'x': 'x', 'y': 'y', });
-lyr_PostacionL3_5.set('fieldAliases', {'sosten': 'sosten', 'tipo': 'tipo', });
-lyr_POSTACIONEXISTENTE_6.set('fieldAliases', {'sosten': 'sosten', 'tipo': 'tipo', });
-lyr_ITG11_7.set('fieldAliases', {'LOTE': 'LOTE', 'CONTRATIST': 'CONTRATIST', 'ALIMENTADO': 'ALIMENTADO', 'N° DE SOS': 'N° DE SOS', 'TIPO DE PO': 'TIPO DE PO', 'N° DE FÁ': 'N° DE FÁ', 'COORDENADA': 'COORDENADA', 'COORDENA_1': 'COORDENA_1', });
-lyr_ITG2_8.set('fieldAliases', {'FECHA': 'FECHA', 'LOTE': 'LOTE', 'CONTRATIST': 'CONTRATIST', 'ALIMENTADO': 'ALIMENTADO', 'N° DE SOS': 'N° DE SOS', 'TIPO DE PO': 'TIPO DE PO', 'N° DE FÁ': 'N° DE FÁ', 'COORD. X': 'COORD. X', 'COORD. Y': 'COORD. Y', });
-lyr_CAE2_9.set('fieldAliases', {'FECHA': 'FECHA', 'LOTE': 'LOTE', 'CONTRATIST': 'CONTRATIST', 'ALIMENTADO': 'ALIMENTADO', 'N° DE SOS': 'N° DE SOS', 'TIPO DE PO': 'TIPO DE PO', 'N° DE FÁ': 'N° DE FÁ', 'COORDENADA': 'COORDENADA', 'COORDENA_1': 'COORDENA_1', });
-lyr_ALT_10.set('fieldAliases', {'field_1': 'field_1', 'LOTE': 'LOTE', 'CONTRATIST': 'CONTRATIST', 'ALIMENTADO': 'ALIMENTADO', 'N° DE SOS': 'N° DE SOS', 'TIPO DE PO': 'TIPO DE PO', 'N° DE FÁ': 'N° DE FÁ', 'X': 'X', 'Y': 'Y', });
-lyr_GHN1_11.set('fieldAliases', {'fecha': 'fecha', 'LOTE': 'LOTE', 'cuadrilla': 'cuadrilla', 'ALIMENT.': 'ALIMENT.', 'Sostén': 'Sostén', 'TIPO/POSTE': 'TIPO/POSTE', 'Nro de fá': 'Nro de fá', 'X': 'X', 'y': 'y', });
-lyr_PostacinExistSistema_12.set('fieldAliases', {'#': '#', 'Tipo': 'Tipo', 'Numero de Sosten': 'Numero de Sosten', 'Alimentadores Lote 3': 'Alimentadores Lote 3', 'Cuadrilla 3': 'Cuadrilla 3', 'Marca': 'Marca', 'N�mero de F�brica': 'N�mero de F�brica', 'Poste': 'Poste', 'Tipo de Poste': 'Tipo de Poste', 'Motivo': 'Motivo', 'Latitud': 'Latitud', 'Longitud': 'Longitud', 'Fecha de Postaci�n': 'Fecha de Postaci�n', 'Creado': 'Creado', });
-lyr_PostacionSistL3Nuevo29012025_13.set('fieldAliases', {'Fecha de Postaci�n': 'Fecha de Postaci�n', 'Alimentadores Lote 3': 'Alimentadores Lote 3', 'Numero de Sosten': 'Numero de Sosten', 'Tipo de Poste': 'Tipo de Poste', 'N�mero de F�brica del Poste': 'N�mero de F�brica del Poste', 'Longitud': 'Longitud', 'Latitud': 'Latitud', });
-lyr_PostacionSistL3Exist29012025_14.set('fieldAliases', {'Fecha de Postaci�n': 'Fecha de Postaci�n', 'Alimentadores Lote 3': 'Alimentadores Lote 3', 'Numero de Sosten': 'Numero de Sosten', 'Tipo de Poste': 'Tipo de Poste', 'Longitud': 'Longitud', 'Latitud': 'Latitud', });
-lyr_BT3x701x501x25L3_15.set('fieldAliases', {'FECHA': 'FECHA', 'INICIO-FIN': 'INICIO-FIN', 'LONGITUD': 'LONGITUD', 'Alimenta': 'Alimenta', 'ítem': 'ítem', 'corte': 'corte', });
-lyr_MT3x35_L3_16.set('fieldAliases', {'FECHA': 'FECHA', 'INICIO/FIN': 'INICIO/FIN', 'LONGITUD': 'LONGITUD', 'Alimentad': 'Alimentad', 'ítem': 'ítem', 'corte': 'corte', });
-lyr_MT3x70L3_17.set('fieldAliases', {'FECHA': 'FECHA', 'INICIO-FIN': 'INICIO-FIN', 'LONGITUD': 'LONGITUD', 'Aliment.': 'Aliment.', 'ítem': 'ítem', 'corte': 'corte', });
-lyr_MT3x185L3_18.set('fieldAliases', {'FECHA': 'FECHA', 'INICIO-FIN': 'INICIO-FIN', 'LONGITUD': 'LONGITUD', 'Alimenta.': 'Alimenta.', 'ítem': 'ítem', 'corte': 'corte', });
-lyr_PDL3_2.set('fieldImages', {'ALIMENTADOR': 'TextEdit', 'TIPO COLUMNA': 'TextEdit', 'N° DE SOSTEN': 'TextEdit', 'N° DE FÁBRICA': 'Range', 'NRO ANDE': 'Range', 'COORDENADA X': 'TextEdit', 'COORDENADA Y': 'TextEdit', });
-lyr_PDL3sist11022025_3.set('fieldImages', {'Fecha de inicio': 'TextEdit', 'Numero de Sosten': 'TextEdit', 'Alimentadores Lote 3': 'TextEdit', 'Tipo de Poste': 'TextEdit', 'Nro de Fabrica del trafo': 'Range', 'N�ANDE': 'Range', 'Longitud': 'TextEdit', 'Latitud': 'TextEdit', });
-lyr_APL3_4.set('fieldImages', {'LOTE': 'TextEdit', 'CONTRATIST': 'TextEdit', 'ALIMENTADO': 'TextEdit', 'N° DE SOS': 'TextEdit', 'TIPO DE PO': 'TextEdit', 'TIPO AP': 'Range', 'x': 'Range', 'y': 'Range', });
-lyr_PostacionL3_5.set('fieldImages', {'sosten': 'TextEdit', 'tipo': 'TextEdit', });
-lyr_POSTACIONEXISTENTE_6.set('fieldImages', {'sosten': 'TextEdit', 'tipo': 'TextEdit', });
-lyr_ITG11_7.set('fieldImages', {'LOTE': 'TextEdit', 'CONTRATIST': 'TextEdit', 'ALIMENTADO': 'TextEdit', 'N° DE SOS': 'TextEdit', 'TIPO DE PO': 'TextEdit', 'N° DE FÁ': 'TextEdit', 'COORDENADA': 'TextEdit', 'COORDENA_1': 'TextEdit', });
-lyr_ITG2_8.set('fieldImages', {'FECHA': 'TextEdit', 'LOTE': 'TextEdit', 'CONTRATIST': 'TextEdit', 'ALIMENTADO': 'TextEdit', 'N° DE SOS': 'TextEdit', 'TIPO DE PO': 'TextEdit', 'N° DE FÁ': 'TextEdit', 'COORD. X': 'TextEdit', 'COORD. Y': 'TextEdit', });
-lyr_CAE2_9.set('fieldImages', {'FECHA': 'TextEdit', 'LOTE': 'TextEdit', 'CONTRATIST': 'TextEdit', 'ALIMENTADO': 'TextEdit', 'N° DE SOS': 'TextEdit', 'TIPO DE PO': 'TextEdit', 'N° DE FÁ': 'TextEdit', 'COORDENADA': 'TextEdit', 'COORDENA_1': 'TextEdit', });
-lyr_ALT_10.set('fieldImages', {'field_1': 'TextEdit', 'LOTE': 'TextEdit', 'CONTRATIST': 'TextEdit', 'ALIMENTADO': 'TextEdit', 'N° DE SOS': 'TextEdit', 'TIPO DE PO': 'TextEdit', 'N° DE FÁ': 'TextEdit', 'X': 'TextEdit', 'Y': 'TextEdit', });
-lyr_GHN1_11.set('fieldImages', {'fecha': 'TextEdit', 'LOTE': 'TextEdit', 'cuadrilla': 'TextEdit', 'ALIMENT.': 'TextEdit', 'Sostén': 'TextEdit', 'TIPO/POSTE': 'TextEdit', 'Nro de fá': 'TextEdit', 'X': 'TextEdit', 'y': 'TextEdit', });
-lyr_PostacinExistSistema_12.set('fieldImages', {'#': 'Range', 'Tipo': 'TextEdit', 'Numero de Sosten': 'TextEdit', 'Alimentadores Lote 3': 'TextEdit', 'Cuadrilla 3': 'TextEdit', 'Marca': 'TextEdit', 'N�mero de F�brica': 'Range', 'Poste': 'TextEdit', 'Tipo de Poste': 'TextEdit', 'Motivo': 'TextEdit', 'Latitud': 'TextEdit', 'Longitud': 'TextEdit', 'Fecha de Postaci�n': 'TextEdit', 'Creado': 'TextEdit', });
-lyr_PostacionSistL3Nuevo29012025_13.set('fieldImages', {'Fecha de Postaci�n': 'TextEdit', 'Alimentadores Lote 3': 'TextEdit', 'Numero de Sosten': 'TextEdit', 'Tipo de Poste': 'TextEdit', 'N�mero de F�brica del Poste': 'TextEdit', 'Longitud': 'TextEdit', 'Latitud': 'TextEdit', });
-lyr_PostacionSistL3Exist29012025_14.set('fieldImages', {'Fecha de Postaci�n': 'TextEdit', 'Alimentadores Lote 3': 'TextEdit', 'Numero de Sosten': 'TextEdit', 'Tipo de Poste': 'TextEdit', 'Longitud': 'TextEdit', 'Latitud': 'TextEdit', });
-lyr_BT3x701x501x25L3_15.set('fieldImages', {'FECHA': 'TextEdit', 'INICIO-FIN': 'TextEdit', 'LONGITUD': 'TextEdit', 'Alimenta': 'TextEdit', 'ítem': 'TextEdit', 'corte': 'TextEdit', });
-lyr_MT3x35_L3_16.set('fieldImages', {'FECHA': 'TextEdit', 'INICIO/FIN': 'TextEdit', 'LONGITUD': 'TextEdit', 'Alimentad': 'TextEdit', 'ítem': 'TextEdit', 'corte': 'TextEdit', });
-lyr_MT3x70L3_17.set('fieldImages', {'FECHA': 'TextEdit', 'INICIO-FIN': 'TextEdit', 'LONGITUD': 'TextEdit', 'Aliment.': 'TextEdit', 'ítem': 'TextEdit', 'corte': 'TextEdit', });
-lyr_MT3x185L3_18.set('fieldImages', {'FECHA': 'TextEdit', 'INICIO-FIN': 'TextEdit', 'LONGITUD': 'TextEdit', 'Alimenta.': 'TextEdit', 'ítem': 'TextEdit', 'corte': 'TextEdit', });
-lyr_PDL3_2.set('fieldLabels', {'ALIMENTADOR': 'no label', 'TIPO COLUMNA': 'no label', 'N° DE SOSTEN': 'no label', 'N° DE FÁBRICA': 'no label', 'NRO ANDE': 'no label', 'COORDENADA X': 'no label', 'COORDENADA Y': 'no label', });
-lyr_PDL3sist11022025_3.set('fieldLabels', {'Fecha de inicio': 'no label', 'Numero de Sosten': 'no label', 'Alimentadores Lote 3': 'no label', 'Tipo de Poste': 'no label', 'Nro de Fabrica del trafo': 'no label', 'N�ANDE': 'no label', 'Longitud': 'no label', 'Latitud': 'no label', });
-lyr_APL3_4.set('fieldLabels', {'LOTE': 'no label', 'CONTRATIST': 'no label', 'ALIMENTADO': 'no label', 'N° DE SOS': 'no label', 'TIPO DE PO': 'no label', 'TIPO AP': 'no label', 'x': 'no label', 'y': 'no label', });
-lyr_PostacionL3_5.set('fieldLabels', {'sosten': 'no label', 'tipo': 'no label', });
-lyr_POSTACIONEXISTENTE_6.set('fieldLabels', {'sosten': 'no label', 'tipo': 'no label', });
-lyr_ITG11_7.set('fieldLabels', {'LOTE': 'no label', 'CONTRATIST': 'no label', 'ALIMENTADO': 'no label', 'N° DE SOS': 'no label', 'TIPO DE PO': 'no label', 'N° DE FÁ': 'no label', 'COORDENADA': 'no label', 'COORDENA_1': 'no label', });
-lyr_ITG2_8.set('fieldLabels', {'FECHA': 'no label', 'LOTE': 'no label', 'CONTRATIST': 'no label', 'ALIMENTADO': 'no label', 'N° DE SOS': 'no label', 'TIPO DE PO': 'no label', 'N° DE FÁ': 'no label', 'COORD. X': 'no label', 'COORD. Y': 'no label', });
-lyr_CAE2_9.set('fieldLabels', {'FECHA': 'no label', 'LOTE': 'no label', 'CONTRATIST': 'no label', 'ALIMENTADO': 'no label', 'N° DE SOS': 'no label', 'TIPO DE PO': 'no label', 'N° DE FÁ': 'no label', 'COORDENADA': 'no label', 'COORDENA_1': 'no label', });
-lyr_ALT_10.set('fieldLabels', {'field_1': 'no label', 'LOTE': 'no label', 'CONTRATIST': 'no label', 'ALIMENTADO': 'no label', 'N° DE SOS': 'no label', 'TIPO DE PO': 'no label', 'N° DE FÁ': 'no label', 'X': 'no label', 'Y': 'no label', });
-lyr_GHN1_11.set('fieldLabels', {'fecha': 'no label', 'LOTE': 'no label', 'cuadrilla': 'no label', 'ALIMENT.': 'no label', 'Sostén': 'no label', 'TIPO/POSTE': 'no label', 'Nro de fá': 'no label', 'X': 'no label', 'y': 'no label', });
-lyr_PostacinExistSistema_12.set('fieldLabels', {'#': 'no label', 'Tipo': 'no label', 'Numero de Sosten': 'no label', 'Alimentadores Lote 3': 'no label', 'Cuadrilla 3': 'no label', 'Marca': 'no label', 'N�mero de F�brica': 'no label', 'Poste': 'no label', 'Tipo de Poste': 'no label', 'Motivo': 'no label', 'Latitud': 'no label', 'Longitud': 'no label', 'Fecha de Postaci�n': 'no label', 'Creado': 'no label', });
-lyr_PostacionSistL3Nuevo29012025_13.set('fieldLabels', {'Fecha de Postaci�n': 'no label', 'Alimentadores Lote 3': 'no label', 'Numero de Sosten': 'no label', 'Tipo de Poste': 'no label', 'N�mero de F�brica del Poste': 'no label', 'Longitud': 'no label', 'Latitud': 'no label', });
-lyr_PostacionSistL3Exist29012025_14.set('fieldLabels', {'Fecha de Postaci�n': 'no label', 'Alimentadores Lote 3': 'no label', 'Numero de Sosten': 'no label', 'Tipo de Poste': 'no label', 'Longitud': 'no label', 'Latitud': 'no label', });
-lyr_BT3x701x501x25L3_15.set('fieldLabels', {'FECHA': 'no label', 'INICIO-FIN': 'no label', 'LONGITUD': 'no label', 'Alimenta': 'no label', 'ítem': 'no label', 'corte': 'no label', });
-lyr_MT3x35_L3_16.set('fieldLabels', {'FECHA': 'no label', 'INICIO/FIN': 'no label', 'LONGITUD': 'no label', 'Alimentad': 'no label', 'ítem': 'no label', 'corte': 'no label', });
-lyr_MT3x70L3_17.set('fieldLabels', {'FECHA': 'no label', 'INICIO-FIN': 'no label', 'LONGITUD': 'no label', 'Aliment.': 'no label', 'ítem': 'no label', 'corte': 'no label', });
-lyr_MT3x185L3_18.set('fieldLabels', {'FECHA': 'no label', 'INICIO-FIN': 'no label', 'LONGITUD': 'no label', 'Alimenta.': 'no label', 'ítem': 'no label', 'corte': 'no label', });
-lyr_MT3x185L3_18.on('precompose', function(evt) {
+lyr_GoogleHybrid_0.setVisible(true);lyr_OpenStreetMap_1.setVisible(true);lyr_PostacionL3_2.setVisible(true);lyr_POSTACIONEXISTENTE_3.setVisible(true);lyr_ITG11_4.setVisible(true);lyr_ITG2_5.setVisible(true);lyr_CAE2_6.setVisible(true);lyr_ALT_7.setVisible(true);lyr_GHN1_8.setVisible(true);lyr_PostacinExistSistema_9.setVisible(true);lyr_PostacionSistL3Exist28082025_10.setVisible(true);lyr_PostacionSistL3Nuevo28082025_11.setVisible(true);lyr_PostacionL3Exist02112025_12.setVisible(true);lyr_PostacionL3Nuevo02112025_13.setVisible(true);lyr_BT3x701x501x25L3_14.setVisible(true);lyr_MT3x35_L3_15.setVisible(true);lyr_MT3x70L3_16.setVisible(true);lyr_MT3x185L3_17.setVisible(true);lyr_PDL3_18.setVisible(true);lyr_PDL3Sist02112025_19.setVisible(true);
+var layersList = [lyr_GoogleHybrid_0,lyr_OpenStreetMap_1,group_LOTE3,lyr_BT3x701x501x25L3_14,lyr_MT3x35_L3_15,lyr_MT3x70L3_16,lyr_MT3x185L3_17,lyr_PDL3_18,lyr_PDL3Sist02112025_19];
+lyr_PostacionL3_2.set('fieldAliases', {'sosten': 'sosten', 'tipo': 'tipo', });
+lyr_POSTACIONEXISTENTE_3.set('fieldAliases', {'sosten': 'sosten', 'tipo': 'tipo', });
+lyr_ITG11_4.set('fieldAliases', {'LOTE': 'LOTE', 'CONTRATIST': 'CONTRATIST', 'ALIMENTADO': 'ALIMENTADO', 'N° DE SOS': 'N° DE SOS', 'TIPO DE PO': 'TIPO DE PO', 'N° DE FÁ': 'N° DE FÁ', 'COORDENADA': 'COORDENADA', 'COORDENA_1': 'COORDENA_1', });
+lyr_ITG2_5.set('fieldAliases', {'FECHA': 'FECHA', 'LOTE': 'LOTE', 'CONTRATIST': 'CONTRATIST', 'ALIMENTADO': 'ALIMENTADO', 'N° DE SOS': 'N° DE SOS', 'TIPO DE PO': 'TIPO DE PO', 'N° DE FÁ': 'N° DE FÁ', 'COORD. X': 'COORD. X', 'COORD. Y': 'COORD. Y', });
+lyr_CAE2_6.set('fieldAliases', {'FECHA': 'FECHA', 'LOTE': 'LOTE', 'CONTRATIST': 'CONTRATIST', 'ALIMENTADO': 'ALIMENTADO', 'N° DE SOS': 'N° DE SOS', 'TIPO DE PO': 'TIPO DE PO', 'N° DE FÁ': 'N° DE FÁ', 'COORDENADA': 'COORDENADA', 'COORDENA_1': 'COORDENA_1', });
+lyr_ALT_7.set('fieldAliases', {'field_1': 'field_1', 'LOTE': 'LOTE', 'CONTRATIST': 'CONTRATIST', 'ALIMENTADO': 'ALIMENTADO', 'N° DE SOS': 'N° DE SOS', 'TIPO DE PO': 'TIPO DE PO', 'N° DE FÁ': 'N° DE FÁ', 'X': 'X', 'Y': 'Y', });
+lyr_GHN1_8.set('fieldAliases', {'fecha': 'fecha', 'LOTE': 'LOTE', 'cuadrilla': 'cuadrilla', 'ALIMENT.': 'ALIMENT.', 'Sostén': 'Sostén', 'TIPO/POSTE': 'TIPO/POSTE', 'Nro de fá': 'Nro de fá', 'X': 'X', 'y': 'y', });
+lyr_PostacinExistSistema_9.set('fieldAliases', {'#': '#', 'Tipo': 'Tipo', 'Numero de Sosten': 'Numero de Sosten', 'Alimentadores Lote 3': 'Alimentadores Lote 3', 'Cuadrilla 3': 'Cuadrilla 3', 'Marca': 'Marca', 'N�mero de F�brica': 'N�mero de F�brica', 'Poste': 'Poste', 'Tipo de Poste': 'Tipo de Poste', 'Motivo': 'Motivo', 'Latitud': 'Latitud', 'Longitud': 'Longitud', 'Fecha de Postaci�n': 'Fecha de Postaci�n', 'Creado': 'Creado', });
+lyr_PostacionSistL3Exist28082025_10.set('fieldAliases', {'#': '#', 'Alimentadores Lote 3': 'Alimentadores Lote 3', 'Numero de Sosten': 'Numero de Sosten', 'Tipo de Poste': 'Tipo de Poste', 'N�mero de F�brica del Poste': 'N�mero de F�brica del Poste', 'Longitud': 'Longitud', 'Latitud': 'Latitud', });
+lyr_PostacionSistL3Nuevo28082025_11.set('fieldAliases', {'#': '#', 'Alimentadores Lote 3': 'Alimentadores Lote 3', 'Numero de Sosten': 'Numero de Sosten', 'Tipo de Poste': 'Tipo de Poste', 'N�mero de F�brica del Poste': 'N�mero de F�brica del Poste', 'Longitud': 'Longitud', 'Latitud': 'Latitud', });
+lyr_PostacionL3Exist02112025_12.set('fieldAliases', {'LATITUD': 'LATITUD', 'LONGITUD': 'LONGITUD', 'ALIMENTADOR': 'ALIMENTADOR', 'NRO_SOSTEN': 'NRO_SOSTEN', 'TIPO_POSTE': 'TIPO_POSTE', });
+lyr_PostacionL3Nuevo02112025_13.set('fieldAliases', {'LATITUD': 'LATITUD', 'LONGITUD': 'LONGITUD', 'ALIMENTADOR': 'ALIMENTADOR', 'NRO_SOSTEN': 'NRO_SOSTEN', 'TIPO_POSTE': 'TIPO_POSTE', });
+lyr_BT3x701x501x25L3_14.set('fieldAliases', {'FECHA': 'FECHA', 'INICIO-FIN': 'INICIO-FIN', 'LONGITUD': 'LONGITUD', 'Alimenta': 'Alimenta', 'ítem': 'ítem', 'corte': 'corte', });
+lyr_MT3x35_L3_15.set('fieldAliases', {'FECHA': 'FECHA', 'INICIO/FIN': 'INICIO/FIN', 'LONGITUD': 'LONGITUD', 'Alimentad': 'Alimentad', 'ítem': 'ítem', 'corte': 'corte', });
+lyr_MT3x70L3_16.set('fieldAliases', {'FECHA': 'FECHA', 'INICIO-FIN': 'INICIO-FIN', 'LONGITUD': 'LONGITUD', 'Aliment.': 'Aliment.', 'ítem': 'ítem', 'corte': 'corte', });
+lyr_MT3x185L3_17.set('fieldAliases', {'FECHA': 'FECHA', 'INICIO-FIN': 'INICIO-FIN', 'LONGITUD': 'LONGITUD', 'Alimenta.': 'Alimenta.', 'ítem': 'ítem', 'corte': 'corte', });
+lyr_PDL3_18.set('fieldAliases', {'ALIMENTADOR': 'ALIMENTADOR', 'TIPO COLUMNA': 'TIPO COLUMNA', 'N° DE SOSTEN': 'N° DE SOSTEN', 'N° DE FÁBRICA': 'N° DE FÁBRICA', 'NRO ANDE': 'NRO ANDE', 'COORDENADA X': 'COORDENADA X', 'COORDENADA Y': 'COORDENADA Y', });
+lyr_PDL3Sist02112025_19.set('fieldAliases', {'Sigla PD': 'Sigla PD', 'Numero': 'Numero', 'Alimentador': 'Alimentador', 'Nro de Sosten': 'Nro de Sosten', 'LATITUD': 'LATITUD', 'LONGITUD': 'LONGITUD', 'N° Ande': 'N° Ande', });
+lyr_PostacionL3_2.set('fieldImages', {'sosten': 'TextEdit', 'tipo': 'TextEdit', });
+lyr_POSTACIONEXISTENTE_3.set('fieldImages', {'sosten': 'TextEdit', 'tipo': 'TextEdit', });
+lyr_ITG11_4.set('fieldImages', {'LOTE': 'TextEdit', 'CONTRATIST': 'TextEdit', 'ALIMENTADO': 'TextEdit', 'N° DE SOS': 'TextEdit', 'TIPO DE PO': 'TextEdit', 'N° DE FÁ': 'TextEdit', 'COORDENADA': 'TextEdit', 'COORDENA_1': 'TextEdit', });
+lyr_ITG2_5.set('fieldImages', {'FECHA': 'TextEdit', 'LOTE': 'TextEdit', 'CONTRATIST': 'TextEdit', 'ALIMENTADO': 'TextEdit', 'N° DE SOS': 'TextEdit', 'TIPO DE PO': 'TextEdit', 'N° DE FÁ': 'TextEdit', 'COORD. X': 'TextEdit', 'COORD. Y': 'TextEdit', });
+lyr_CAE2_6.set('fieldImages', {'FECHA': 'TextEdit', 'LOTE': 'TextEdit', 'CONTRATIST': 'TextEdit', 'ALIMENTADO': 'TextEdit', 'N° DE SOS': 'TextEdit', 'TIPO DE PO': 'TextEdit', 'N° DE FÁ': 'TextEdit', 'COORDENADA': 'TextEdit', 'COORDENA_1': 'TextEdit', });
+lyr_ALT_7.set('fieldImages', {'field_1': 'TextEdit', 'LOTE': 'TextEdit', 'CONTRATIST': 'TextEdit', 'ALIMENTADO': 'TextEdit', 'N° DE SOS': 'TextEdit', 'TIPO DE PO': 'TextEdit', 'N° DE FÁ': 'TextEdit', 'X': 'TextEdit', 'Y': 'TextEdit', });
+lyr_GHN1_8.set('fieldImages', {'fecha': 'TextEdit', 'LOTE': 'TextEdit', 'cuadrilla': 'TextEdit', 'ALIMENT.': 'TextEdit', 'Sostén': 'TextEdit', 'TIPO/POSTE': 'TextEdit', 'Nro de fá': 'TextEdit', 'X': 'TextEdit', 'y': 'TextEdit', });
+lyr_PostacinExistSistema_9.set('fieldImages', {'#': 'Range', 'Tipo': 'TextEdit', 'Numero de Sosten': 'TextEdit', 'Alimentadores Lote 3': 'TextEdit', 'Cuadrilla 3': 'TextEdit', 'Marca': 'TextEdit', 'N�mero de F�brica': 'Range', 'Poste': 'TextEdit', 'Tipo de Poste': 'TextEdit', 'Motivo': 'TextEdit', 'Latitud': 'TextEdit', 'Longitud': 'TextEdit', 'Fecha de Postaci�n': 'TextEdit', 'Creado': 'TextEdit', });
+lyr_PostacionSistL3Exist28082025_10.set('fieldImages', {'#': 'Range', 'Alimentadores Lote 3': 'TextEdit', 'Numero de Sosten': 'TextEdit', 'Tipo de Poste': 'TextEdit', 'N�mero de F�brica del Poste': 'Range', 'Longitud': 'TextEdit', 'Latitud': 'TextEdit', });
+lyr_PostacionSistL3Nuevo28082025_11.set('fieldImages', {'#': 'Range', 'Alimentadores Lote 3': 'TextEdit', 'Numero de Sosten': 'TextEdit', 'Tipo de Poste': 'TextEdit', 'N�mero de F�brica del Poste': 'Range', 'Longitud': 'TextEdit', 'Latitud': 'TextEdit', });
+lyr_PostacionL3Exist02112025_12.set('fieldImages', {'LATITUD': 'TextEdit', 'LONGITUD': 'TextEdit', 'ALIMENTADOR': 'TextEdit', 'NRO_SOSTEN': 'TextEdit', 'TIPO_POSTE': 'TextEdit', });
+lyr_PostacionL3Nuevo02112025_13.set('fieldImages', {'LATITUD': 'TextEdit', 'LONGITUD': 'TextEdit', 'ALIMENTADOR': 'TextEdit', 'NRO_SOSTEN': 'TextEdit', 'TIPO_POSTE': 'TextEdit', });
+lyr_BT3x701x501x25L3_14.set('fieldImages', {'FECHA': 'TextEdit', 'INICIO-FIN': 'TextEdit', 'LONGITUD': 'TextEdit', 'Alimenta': 'TextEdit', 'ítem': 'TextEdit', 'corte': 'TextEdit', });
+lyr_MT3x35_L3_15.set('fieldImages', {'FECHA': 'TextEdit', 'INICIO/FIN': 'TextEdit', 'LONGITUD': 'TextEdit', 'Alimentad': 'TextEdit', 'ítem': 'TextEdit', 'corte': 'TextEdit', });
+lyr_MT3x70L3_16.set('fieldImages', {'FECHA': 'TextEdit', 'INICIO-FIN': 'TextEdit', 'LONGITUD': 'TextEdit', 'Aliment.': 'TextEdit', 'ítem': 'TextEdit', 'corte': 'TextEdit', });
+lyr_MT3x185L3_17.set('fieldImages', {'FECHA': 'TextEdit', 'INICIO-FIN': 'TextEdit', 'LONGITUD': 'TextEdit', 'Alimenta.': 'TextEdit', 'ítem': 'TextEdit', 'corte': 'TextEdit', });
+lyr_PDL3_18.set('fieldImages', {'ALIMENTADOR': 'TextEdit', 'TIPO COLUMNA': 'TextEdit', 'N° DE SOSTEN': 'TextEdit', 'N° DE FÁBRICA': 'Range', 'NRO ANDE': 'Range', 'COORDENADA X': 'TextEdit', 'COORDENADA Y': 'TextEdit', });
+lyr_PDL3Sist02112025_19.set('fieldImages', {'Sigla PD': 'TextEdit', 'Numero': 'Range', 'Alimentador': 'TextEdit', 'Nro de Sosten': 'TextEdit', 'LATITUD': 'TextEdit', 'LONGITUD': 'TextEdit', 'N° Ande': 'Range', });
+lyr_PostacionL3_2.set('fieldLabels', {'sosten': 'no label', 'tipo': 'no label', });
+lyr_POSTACIONEXISTENTE_3.set('fieldLabels', {'sosten': 'no label', 'tipo': 'no label', });
+lyr_ITG11_4.set('fieldLabels', {'LOTE': 'no label', 'CONTRATIST': 'no label', 'ALIMENTADO': 'no label', 'N° DE SOS': 'no label', 'TIPO DE PO': 'no label', 'N° DE FÁ': 'no label', 'COORDENADA': 'no label', 'COORDENA_1': 'no label', });
+lyr_ITG2_5.set('fieldLabels', {'FECHA': 'no label', 'LOTE': 'no label', 'CONTRATIST': 'no label', 'ALIMENTADO': 'no label', 'N° DE SOS': 'no label', 'TIPO DE PO': 'no label', 'N° DE FÁ': 'no label', 'COORD. X': 'no label', 'COORD. Y': 'no label', });
+lyr_CAE2_6.set('fieldLabels', {'FECHA': 'no label', 'LOTE': 'no label', 'CONTRATIST': 'no label', 'ALIMENTADO': 'no label', 'N° DE SOS': 'no label', 'TIPO DE PO': 'no label', 'N° DE FÁ': 'no label', 'COORDENADA': 'no label', 'COORDENA_1': 'no label', });
+lyr_ALT_7.set('fieldLabels', {'field_1': 'no label', 'LOTE': 'no label', 'CONTRATIST': 'no label', 'ALIMENTADO': 'no label', 'N° DE SOS': 'no label', 'TIPO DE PO': 'no label', 'N° DE FÁ': 'no label', 'X': 'no label', 'Y': 'no label', });
+lyr_GHN1_8.set('fieldLabels', {'fecha': 'no label', 'LOTE': 'no label', 'cuadrilla': 'no label', 'ALIMENT.': 'no label', 'Sostén': 'no label', 'TIPO/POSTE': 'no label', 'Nro de fá': 'no label', 'X': 'no label', 'y': 'no label', });
+lyr_PostacinExistSistema_9.set('fieldLabels', {'#': 'no label', 'Tipo': 'no label', 'Numero de Sosten': 'no label', 'Alimentadores Lote 3': 'no label', 'Cuadrilla 3': 'no label', 'Marca': 'no label', 'N�mero de F�brica': 'no label', 'Poste': 'no label', 'Tipo de Poste': 'no label', 'Motivo': 'no label', 'Latitud': 'no label', 'Longitud': 'no label', 'Fecha de Postaci�n': 'no label', 'Creado': 'no label', });
+lyr_PostacionSistL3Exist28082025_10.set('fieldLabels', {'#': 'no label', 'Alimentadores Lote 3': 'no label', 'Numero de Sosten': 'no label', 'Tipo de Poste': 'no label', 'N�mero de F�brica del Poste': 'no label', 'Longitud': 'no label', 'Latitud': 'no label', });
+lyr_PostacionSistL3Nuevo28082025_11.set('fieldLabels', {'#': 'no label', 'Alimentadores Lote 3': 'no label', 'Numero de Sosten': 'no label', 'Tipo de Poste': 'no label', 'N�mero de F�brica del Poste': 'no label', 'Longitud': 'no label', 'Latitud': 'no label', });
+lyr_PostacionL3Exist02112025_12.set('fieldLabels', {'LATITUD': 'no label', 'LONGITUD': 'no label', 'ALIMENTADOR': 'no label', 'NRO_SOSTEN': 'no label', 'TIPO_POSTE': 'no label', });
+lyr_PostacionL3Nuevo02112025_13.set('fieldLabels', {'LATITUD': 'no label', 'LONGITUD': 'no label', 'ALIMENTADOR': 'no label', 'NRO_SOSTEN': 'no label', 'TIPO_POSTE': 'no label', });
+lyr_BT3x701x501x25L3_14.set('fieldLabels', {'FECHA': 'no label', 'INICIO-FIN': 'no label', 'LONGITUD': 'no label', 'Alimenta': 'no label', 'ítem': 'no label', 'corte': 'no label', });
+lyr_MT3x35_L3_15.set('fieldLabels', {'FECHA': 'no label', 'INICIO/FIN': 'no label', 'LONGITUD': 'no label', 'Alimentad': 'no label', 'ítem': 'no label', 'corte': 'no label', });
+lyr_MT3x70L3_16.set('fieldLabels', {'FECHA': 'no label', 'INICIO-FIN': 'no label', 'LONGITUD': 'no label', 'Aliment.': 'no label', 'ítem': 'no label', 'corte': 'no label', });
+lyr_MT3x185L3_17.set('fieldLabels', {'FECHA': 'no label', 'INICIO-FIN': 'no label', 'LONGITUD': 'no label', 'Alimenta.': 'no label', 'ítem': 'no label', 'corte': 'no label', });
+lyr_PDL3_18.set('fieldLabels', {'ALIMENTADOR': 'no label', 'TIPO COLUMNA': 'no label', 'N° DE SOSTEN': 'no label', 'N° DE FÁBRICA': 'no label', 'NRO ANDE': 'no label', 'COORDENADA X': 'no label', 'COORDENADA Y': 'no label', });
+lyr_PDL3Sist02112025_19.set('fieldLabels', {'Sigla PD': 'no label', 'Numero': 'no label', 'Alimentador': 'no label', 'Nro de Sosten': 'no label', 'LATITUD': 'no label', 'LONGITUD': 'no label', 'N° Ande': 'no label', });
+lyr_PDL3Sist02112025_19.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
