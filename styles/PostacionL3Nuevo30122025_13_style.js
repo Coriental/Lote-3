@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_PDL3Sist02112025_19 = function(feature, resolution){
+var style_PostacionL3Nuevo30122025_13 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -21,8 +21,15 @@ var style_PDL3Sist02112025_19 = function(feature, resolution){
         labelText = String("");
     }
     var style = [ new ol.style.Style({
-        image: new ol.style.RegularShape({radius: 8.0 + size, points: 3,
-            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.95}), fill: new ol.style.Fill({color: 'rgba(235,245,25,1.0)'})}),
+        image: new ol.style.Icon({
+                  imgSize: [580, 580],
+                  scale: 0.04482758620689655,
+                  anchor: [290.0, 290.0],
+                  anchorXUnits: "pixels",
+                  anchorYUnits: "pixels",
+                  rotation: 0.0,
+                  src: "styles/poi_place_village_11.svg"
+            }),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)

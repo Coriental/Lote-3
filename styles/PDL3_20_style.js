@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_MT3x35_L3_15 = function(feature, resolution){
+var style_PDL3_20 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -9,19 +9,20 @@ var style_MT3x35_L3_15 = function(feature, resolution){
     
     var labelText = ""; 
     var value = feature.get("");
-    var labelFont = "10px, sans-serif";
-    var labelFill = "#000000";
+    var labelFont = "13.0px \'Open Sans\', sans-serif";
+    var labelFill = "#323232";
     var bufferColor = "";
     var bufferWidth = 0;
     var textAlign = "left";
     var offsetX = 0;
     var offsetY = 0;
-    var placement = 'line';
+    var placement = 'point';
     if ("" !== null) {
         labelText = String("");
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(255,127,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 2.508}),
+        image: new ol.style.RegularShape({radius: 8.0 + size, points: 3,
+            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.95}), fill: new ol.style.Fill({color: 'rgba(235,245,25,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
